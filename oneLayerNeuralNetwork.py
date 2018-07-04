@@ -31,7 +31,7 @@ class OneLayerNeuralNetwok():
     # Train the neural network through a process of trail and error. The weights 
     # will be updated on each iteration
     def train(self, training_set_inputs, training_set_outputs, training_iterations):
-        for iteration in xrange(training_iterations):
+        for iteration in range(training_iterations):
             # Input the training set through the NN
             output = self.predict(training_set_inputs)
 
@@ -53,8 +53,8 @@ if __name__ == "__main__":
     # Initialise a one-layer neural network
     neural_network = OneLayerNeuralNetwok()
 
-    print "Random starting synaptic weights: "
-    print neural_network.synaptic_weights
+    print ("Random starting synaptic weights: ")
+    print (neural_network.synaptic_weights)
 
     # Training set with 5 elements
     training_set_inputs = array([
@@ -69,9 +69,9 @@ if __name__ == "__main__":
     # Train the neural network using the training set. It will be done 10K times
     neural_network.train(training_set_inputs, training_set_outputs, 10000)
 
-    print "New synaptic weights after training: "
-    print neural_network.synaptic_weights
+    print ("New synaptic weights after training: ")
+    print (neural_network.synaptic_weights)
 
     #Test the neural network after training
-    print "Considering new situation [1,1,0,0,0] -> ?: "
-    print neural_network.predict(array([1,1,0,0,0]))
+    print ("Considering new situation [1,1,0,0,0] -> ?: ")
+    print (neural_network.predict(array([1,1,0,0,0])))
